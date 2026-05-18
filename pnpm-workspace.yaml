@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': true
+  classic-level: true
+  esbuild: true
+  svelte-preprocess: true
+  unrs-resolver: true
