@@ -50,9 +50,7 @@
                     ]
                 },
                 "flag": "weapon",
-                "rollOption": "item:boosted",
                 "key": "ChoiceSet",
-                "prompt": "PF2E.SpecificRule.Prompt.Weapon",
                 "predicate": [
                     {
                         "or": [
@@ -60,7 +58,9 @@
                             "self:type:character"
                         ]
                     }
-                ]
+                ],
+                "prompt": "PF2E.SpecificRule.Prompt.Weapon",
+                "rollOption": "item:boosted"
             }
         ],
         "start": {
