@@ -23,6 +23,8 @@ import { RenderTokenHUD } from "./render-token-hud.ts";
 import { Setup } from "./setup.ts";
 import { TargetToken } from "./target-token.ts";
 import { UpdateWorldTime } from "./update-world-time.ts";
+//
+import { RenderJournalSheet } from "./render-journal-sheet.ts";
 
 export const HooksPF2e = {
     listen(): void {
@@ -45,6 +47,7 @@ export const HooksPF2e = {
             RenderChatPopout,
             RenderCombatTrackerConfig,
             RenderDialog,
+            RenderJournalSheet,
             RenderHUDContainer,
             RenderRegionLegend,
             RenderSettings,

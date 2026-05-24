@@ -1,0 +1,459 @@
+// ============================================
+// Custom Theme
+// ============================================
+
+// ----------------------------------------
+// Font Declarations
+// ----------------------------------------
+
+:root {
+    // Sabon
+    @font-face {
+        font-family: "Sabon";
+        src: url("/fonts/SabonLTStd-Roman.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Sabon";
+        src: url("/fonts/SabonLTStd-Italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Sabon";
+        src: url("/fonts/SabonLTStd-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Sabon";
+        src: url("/fonts/SabonLTStd-BoldItalic.woff2") format("woff2");
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    // Good OT
+    @font-face {
+        font-family: "Good OT";
+        src: url("/fonts/GoodOT.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Good OT";
+        src: url("/fonts/GoodOT-Italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Good OT";
+        src: url("/fonts/GoodOT-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Good OT";
+        src: url("/fonts/GoodOT-BoldItalic.woff2") format("woff2");
+        font-weight: 700;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Good OT";
+        src: url("/fonts/GoodOT-CondBold.woff2") format("woff2");
+        font-weight: 700;
+        font-stretch: condensed;
+        font-style: normal;
+    }
+
+    // FF Good Pro
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-Italic.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-LightItalic.woff2") format("woff2");
+        font-weight: 300;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-MediumItalic.woff2") format("woff2");
+        font-weight: 500;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-News.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-NewsItalic.woff2") format("woff2");
+        font-weight: 600;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-Ultra.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "FF Good Pro";
+        src: url("/fonts/FFGoodPro-UltraItalic.woff2") format("woff2");
+        font-weight: 900;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "FF Good Pro Wide";
+        src: url("/fonts/FFGoodProWide-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    // Taroca
+    @font-face {
+        font-family: "Taroca";
+        src: url("/fonts/Taroca.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+// ----------------------------------------
+// Custom Color Variables
+// ----------------------------------------
+
+body,
+.app,
+.themed.theme-light {
+    /* Remaster Heading Colors */
+    --color-pf-remaster-primary: #002a17;
+    --color-pf-remaster-secondary: #4e1b0e;
+    --color-pf-remaster-tertiary: #025d4e;
+    --color-pf-legacy-quartenary: #a86753;
+
+    /* Gatewalkers Heading Colors */
+    --gatewalkers-heading-color: #00093b;
+    --gatewalkers-heading-color-light: #ba4f4a;
+
+    /* Dynamic Link Colors */
+    --dl-item-color: var(--color-pf-secondary);
+    --dl-journal-color: var(--color-pf-primary);
+    --dl-journal_page-color: var(--color-pf-primary);
+    --dl-actor-color: var(--color-pf-remaster-tertiary);
+    --dl-template-color: #43035c;
+    --dl-roll-color: var(--color-pf-legacy-quartenary);
+
+    /* Journal, Item, Chat background color */
+    --color-pf-content-bgcolor: whitesmoke;
+}
+
+// ----------------------------------------
+// Journal Styles
+// ----------------------------------------
+
+.journal-sheet.journal-entry.pf2e-journal {
+    background-color: var(--color-border-dark-5);
+
+    .journal-entry-content {
+        background: url("/assets/sheet/background.webp");
+    }
+
+    .journal-header {
+        display: none;
+    }
+
+    .journal-entry-pages {
+        margin-left: 0;
+        margin-right: 0;
+
+        .journal-page-content {
+            figure.chapter-img {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            h1.chapter-heading {
+                align-items: center;
+                background-size: cover;
+                border-style: solid;
+                display: flex;
+                flex-direction: column;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                padding: 0.4rem;
+                text-align: center;
+                text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.188);
+
+                &.remaster {
+                    background-image: url("/assets/sheet/remaster/pzo12001-header-bg.webp");
+                    border-color: var(--color-pf-remaster-primary);
+                    border-width: 2px 4px 4px 2px;
+                    color: var(--color-pf-remaster-primary);
+                    font-family: "Taroca";
+                    font-size: var(--font-size-42);
+
+                    span.chapter-info {
+                        display: block;
+                        font-family: "Sabon";
+                        font-size: var(--font-size-14);
+                        font-style: italic;
+                        font-weight: 500;
+                        margin-top: 0.5rem;
+                        padding: 0 1rem;
+                        text-align: justify;
+                    }
+                }
+
+                &.gatewalkers {
+                    align-items: center;
+                    background-image: url("/assets/sheet/gatewalkers/header-bg.webp");
+                    background-size: cover;
+                    border-image-repeat: repeat;
+                    border-image-slice: 22;
+                    border-image-source: url("/assets/sheet/gatewalkers/header-border.webp");
+                    border-width: 5.5px;
+                    color: var(--gatewalkers-heading-color);
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "Barchella Drumal";
+                    font-size: 3.6rem;
+                    margin-top: 0;
+                    padding: 0.4rem;
+                    text-align: center;
+                    text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.188);
+
+                    .chapter {
+                        display: block;
+                        font-size: var(--font-size-36);
+                    }
+                }
+            } // h1.chapter-heading
+
+            article {
+                margin-left: 1.5em;
+                margin-right: 1.5em;
+
+                p,
+                ul {
+                    font-family: "Sabon";
+                    line-height: 1.5;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                p + p {
+                    text-indent: 1.25rem;
+                }
+
+                p:not(aside p, .source) {
+                    text-align: justify;
+                }
+
+                sup {
+                    font-size: x-small;
+                }
+
+                .era {
+                    font-size: x-small;
+                    font-style: italic;
+                    text-transform: uppercase;
+                }
+
+                table {
+                    border: none;
+                    margin-top: 1rem;
+
+                    caption {
+                        font-family: "Good OT";
+                        font-size: var(--font-size-16);
+                        font-stretch: condensed;
+                        font-style: normal;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        text-align: left;
+                    }
+
+                    tfoot {
+                        border: none;
+
+                        td {
+                            font-family: "Sabon";
+                            font-weight: normal;
+                            font-size: smaller;
+                            line-height: 1.2;
+
+                            p {
+                                font-family: inherit;
+                                font-weight: inherit;
+                                font-size: inherit;
+                                line-height: inherit;
+                            }
+                        }
+                    }
+
+                    th {
+                        border: none;
+                        padding: var(--space-4);
+                    }
+
+                    td {
+                        border: none;
+                        vertical-align: text-top;
+                        line-height: 0.5rem;
+
+                        p {
+                            line-height: inherit;
+                        }
+                    }
+                } // table
+
+                &.remaster {
+                    h2 {
+                        border: none;
+                        color: var(--color-pf-remaster-primary);
+                        font-family: "Taroca";
+                        font-size: var(--font-size-28);
+                        font-variant: small-caps;
+                        margin-bottom: 0;
+                        margin-top: 1rem;
+                    }
+
+                    h3 {
+                        border-bottom: none;
+                        color: var(--color-pf-remaster-secondary);
+                        font-family: "Good OT";
+                        font-stretch: condensed;
+                        font-size: var(--font-size-24);
+                        font-style: normal;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                        margin-top: 1rem;
+                        text-transform: uppercase;
+                    }
+
+                    h4 {
+                        color: var(--color-pf-remaster-tertiary);
+                        font-family: "FF Good Pro";
+                        font-size: var(--font-size-20);
+                        font-style: normal;
+                        font-weight: 500;
+                        font-variant: small-caps;
+                        margin-bottom: 0;
+                        margin-top: 1rem;
+                    }
+
+                    section.side-bar {
+                        background-image: url("/assets/sheet/remaster/pzo12001-header-bg.webp");
+                        border-color: var(--color-pf-remaster-primary);
+                        border-style: solid;
+                        border-width: 2px;
+                        float: right;
+                        margin-left: 1rem;
+                        padding: 1rem;
+                        width: 50%;
+
+                        h4 {
+                            color: var(--color-text-dark-primary);
+                            font-size: var(--font-size-17);
+                            font-variant: small-caps;
+                            font-weight: 700;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            text-align: center;
+                        }
+
+                        h5 {
+                            font-family: "Good OT";
+                            font-size: var(--font-size-16);
+                            font-weight: 700;
+                            margin-bottom: 0;
+                            text-align: center;
+                        }
+
+                        h4:not(:first-child),
+                        h5:not(:first-child) {
+                            margin-top: 0.5rem;
+                        }
+
+                        p {
+                            font-family: "Good OT";
+                            font-size: var(--font-size-14);
+                            line-height: 1.1rem;
+                        }
+                    } // section.side-bar
+                } // article.remaster
+
+                &.gatewalkers {
+                    clear: both;
+
+                    h2 {
+                        border-bottom: none;
+                        color: var(--gatewalkers-heading-color);
+                        font-family: "Sabon";
+                        font-size: var(--font-size-24);
+                        font-variant: small-caps;
+                        font-weight: 700;
+                        margin: 1.5rem 0 0.1rem 0;
+                        text-align: center;
+                    }
+
+                    h3 {
+                        border-bottom: none;
+                        color: var(--gatewalkers-heading-color-light);
+                        font-family: "Good OT";
+                        font-size: var(--font-size-18);
+                        font-stretch: condensed;
+                        font-weight: 700;
+                        margin: 1rem 0 0 0;
+                        text-transform: uppercase;
+                    }
+
+                    aside {
+                        border-left-color: var(--gatewalkers-heading-color);
+                        color: var(--gatewalkers-heading-color);
+                        margin-top: 0.5rem;
+
+                        p {
+                            font-family: "Good OT";
+                        }
+
+                        h4 {
+                            color: var(--gatewalkers-heading-color);
+                            font-family: "Good OT";
+                            font-size: var(--font-size-17);
+                            font-weight: 700;
+                            margin-bottom: 0;
+                            text-align: left;
+                            text-transform: uppercase;
+                        }
+                    }
+                } // article.gatewalkers
+            } // article
+        } // .journal-page-content
+    } // .journal-entry-pages
+} // .journal-sheet.journal-entry
