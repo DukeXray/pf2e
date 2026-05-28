@@ -4,7 +4,6 @@ export const RenderJournalSheet = {
         Hooks.on("renderJournalEntrySheet", (app: JournalEntrySheet, html: HTMLElement) => {
             const pack = app.document.pack;
 
-            // Opened directly from a compendium
             if (pack) {
                 if (pack.startsWith("pf2e.")) {
                     html.classList.add("pf2e-journal");
@@ -12,10 +11,18 @@ export const RenderJournalSheet = {
                 return;
             }
 
-            // World document - check for flag
             const styled = app.document.getFlag("pf2e", "styled");
             if (styled) {
                 html.classList.add("pf2e-journal");
+            }
+        });
+
+        Hooks.on("preCreateJournalEntry", (document: JournalEntry, data: object, options: object, userId: string) => {
+            const sourceId = ((data as Record<string, unknown>)._stats?.compendiumSource as string) ?? "";
+            if (sourceId.startsWith("Compendium.pf2e.")) {
+                document.updateSource({
+                    "flags.pf2e.styled": true,
+                });
             }
         });
     },
