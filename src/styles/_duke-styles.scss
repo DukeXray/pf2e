@@ -171,6 +171,29 @@ body,
     /* Journal, Item, Chat background color */
     --color-pf-content-bgcolor: whitesmoke;
 }
+/*
+body.theme-light {
+    .application,
+    #context-menu,
+    .tab.sidebar-tab {
+        background: var(--color-pf-content-bgcolor);
+    }
+    .context-item:hover {
+        background: var(--color-pf-content-bgcolor);
+        color: var(--color-text-emphatic);
+        text-shadow: 0 0 8px var(--color-shadow-primary);
+    }
+}
+
+body.theme-dark {
+    .journal-sheet.journal-entry.pf2e-journal {
+        background-color: var(--color-border-dark-5);
+
+        .journal-entry-content {
+            background: url("/assets/sheet/background.webp") !important;
+        }
+    }
+}*/
 
 // ----------------------------------------
 // Journal Styles
