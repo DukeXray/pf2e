@@ -1,0 +1,20 @@
+// Journal layout - structural and positional styles for the journal application window
+
+.journal-sheet {
+    // Main content area background image
+    .journal-entry-content {
+        background: url("/assets/sheet/background.webp");
+    }
+
+    // Hide the redundant journal title input at the top of the content area
+    // The title is already visible in the window header and sidebar
+    .journal-header {
+        display: none;
+    }
+
+    // Indent heading entries in the sidebar table of contents
+    // to visually separate them from top-level page entries
+    .sidebar .pages-list .headings {
+        margin-left: calc(3 * var(--level-indent));
+    }
+}

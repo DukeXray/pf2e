@@ -1,6 +1,5 @@
-.crb-style.sheet {
-    .window-content {
-        background: url("/assets/sheet/background.webp") no-repeat;
-        background-size: cover;
-    }
+// Background image for all windows except journal sheets
+:not(.journal-sheet) > .window-content {
+    background: url("/assets/sheet/background.webp") no-repeat;
+    background-size: cover;
 }

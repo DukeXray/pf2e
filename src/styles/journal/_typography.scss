@@ -1,0 +1,87 @@
+// TODO: Migrate to @use when upstream pf2e transitions away from @import
+// Base journal typography - applies to all non-themed journals
+
+.journal-entry-page:not(.themed) {
+    .journal-entry-content {
+        background: url("/assets/sheet/background.webp");
+    }
+
+    .journal-header {
+        display: none;
+    }
+
+    .journal-page-content {
+        font-family: var(--journal-body);
+        font-size: var(--font-size-15);
+        line-height: 1.6;
+        color: var(--text-dark);
+
+        h1 {
+            background-image: url("/assets/sheet/pzo12001-header-bg.webp");
+            border-color: var(--color-pf-remaster-primary);
+            border-width: 2px 4px 2px 2px;
+            color: var(--color-pf-remaster-primary);
+            font-family: var(--journal-display);
+            font-size: var(--font-size-36);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            text-align: center;
+
+            span.title-info {
+                display: block;
+                font-family: var(--journal-serif);
+                font-size: var(--font-size-14);
+                font-style: italic;
+                font-weight: 500;
+                margin: 0 0.5em 0.5em 0.5em;
+                text-align: justify;
+            }
+        }
+
+        h2 {
+            border-bottom: none;
+            color: var(--color-pf-remaster-secondary);
+            font-family: var(--journal-display);
+            font-size: var(--font-size-25);
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            line-height: 1.1;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: var(--color-pf-remaster-tertiary);
+            font-family: var(--journal-heading);
+            font-size: var(--font-size-21);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        h4 {
+            color: var(--color-pf-legacy-quaternary);
+            font-size: var(--font-size-15);
+            font-family: var(--journal-heading);
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0.75em;
+            margin-top: 0;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+        }
+    }
+}

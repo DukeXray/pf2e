@@ -1,3 +1,103 @@
+@font-face {
+    font-family: "Sabon";
+    src: url("/fonts/SabonLTStd-Roman.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sabon";
+    src: url("/fonts/SabonLTStd-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Sabon";
+    src: url("/fonts/SabonLTStd-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Sabon";
+    src: url("/fonts/SabonLTStd-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Taroca";
+    src: url("/fonts/Taroca.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GoodOT";
+    src: url("/fonts/GoodOT.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GoodOT";
+    src: url("/fonts/GoodOT-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "GoodOT";
+    src: url("/fonts/GoodOT-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GoodOT";
+    src: url("/fonts/GoodOT-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Pathfinder2eActions";
+    src: url("/fonts/pathfinder-2e-actions.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/vollkorn-v20-latin-ext_latin_cyrillic-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/vollkorn-v20-latin-ext_latin_cyrillic-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/vollkorn-v20-latin-ext_latin_cyrillic-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("fonts/vollkorn-v20-latin-ext_latin_cyrillic-900.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /** Font-size variables not defined by Foundry */
     --font-size-8: 0.5rem;
@@ -23,8 +123,7 @@
     --journal-cursive: "La Belle Aurore", cursive;
     --journal-serif: "Vollkorn", var(--serif);
 
-    @font-face {
-        font-family: "Pathfinder2eActions";
-        src: url("/fonts/pathfinder-2e-actions.woff2") format("woff2");
-    }
+    --journal-body: "Sabon", Georgia, serif;
+    --journal-display: "Taroca", var(--serif-condensed), serif;
+    --journal-heading: "GoodOT", var(--sans-serif), sans-serif;
 }

@@ -1,6 +1,1 @@
-.journal-entry-page {
-    .journal-page-content {
-        @include journal-styling;
-        @import "critical-fumble-deck";
-    }
-}
+@import "critical-fumble-deck";

@@ -1,0 +1,6 @@
+// TODO: Migrate to @use when upstream pf2e transitions away from @import
+.journal-entry-page {
+    .journal-page-content {
+        @include journal-styling;
+    }
+}

@@ -1,0 +1,5 @@
+// TODO: Migrate to @use when upstream pf2e transitions away from @import
+// TinyMCE editor journal styling
+#tinymce {
+    @include journal-styling;
+}

@@ -133,6 +133,16 @@ body,
     --color-pf-text-adjusted-higher: #009988;
     --color-pf-text-adjusted-lower: #cc3311;
 
+    /* Remaster Heading Colors */
+    --color-pf-remaster-primary: #002a17;
+    --color-pf-remaster-secondary: #002a17;
+    --color-pf-remaster-tertiary: #4e1b0e;
+    --color-pf-remaster-quaternary: #a86753;
+
+    /* Gatewalkers Heading Colors */
+    --gatewalkers-heading-color: #00093b;
+    --gatewalkers-heading-color-light: #ba4f4a;
+
     /* Fix core style bug */
     textarea {
         font-family: var(--font-body);
