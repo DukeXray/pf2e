@@ -1,15 +1,6 @@
-// TODO: Migrate to @use when upstream pf2e transitions away from @import
 // Base journal typography - applies to all non-themed journals
 
-.journal-entry-page:not(.themed) {
-    .journal-entry-content {
-        background: url("/assets/sheet/background.webp");
-    }
-
-    .journal-header {
-        display: none;
-    }
-
+.sheet.journal-sheet:not(.themed) {
     .journal-page-content {
         font-family: var(--journal-body);
         font-size: var(--font-size-15);
@@ -22,19 +13,22 @@
             border-width: 2px 4px 2px 2px;
             color: var(--color-pf-remaster-primary);
             font-family: var(--journal-display);
-            font-size: var(--font-size-36);
+            font-size: var(--font-size-38);
             font-weight: 400;
             letter-spacing: 0.02em;
-            line-height: 1.1;
+            line-height: 1.2;
+            margin-left: -1.1em;
+            margin-right: -1em;
             text-align: center;
 
             span.title-info {
                 display: block;
                 font-family: var(--journal-serif);
-                font-size: var(--font-size-14);
+                font-size: var(--font-size-18);
                 font-style: italic;
                 font-weight: 500;
-                margin: 0 0.5em 0.5em 0.5em;
+                letter-spacing: -0.02em;
+                padding: 0.2em 2.6em 0.5em 2.7em;
                 text-align: justify;
             }
         }
@@ -48,7 +42,6 @@
             letter-spacing: 0.01em;
             line-height: 1.1;
             margin-bottom: 0;
-            text-transform: uppercase;
         }
 
         h3 {
@@ -74,6 +67,11 @@
         p {
             margin-bottom: 0.75em;
             margin-top: 0;
+            text-indent: 1.5em;
+
+            &:first-of-type {
+                text-indent: 0;
+            }
         }
 
         strong {
