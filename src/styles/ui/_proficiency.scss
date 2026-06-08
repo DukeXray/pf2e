@@ -1,0 +1,35 @@
+// Usage: <span class="proficiency" data-rank="trained">Trained</span>
+
+.sheet.journal-sheet:not(.themed),
+.sheet.item {
+    .proficiency {
+        border-radius: 0.5em;
+        display: inline;
+        font-family: var(--sans-serif);
+        font-size: var(--font-size-11);
+        letter-spacing: 0.05em;
+        padding: 1px 4px 0;
+        margin: -1px 0;
+        color: #ffffff;
+        vertical-align: middle; // ← keeps the bubble centered on the text line
+        text-transform: uppercase;
+
+        &[data-rank="untrained"] {
+            background-color: var(--color-proficiency-untrained);
+        }
+        &[data-rank="trained"] {
+            background-color: var(--color-proficiency-trained);
+        }
+        &[data-rank="expert"] {
+            background-color: var(--color-proficiency-expert);
+        }
+        &[data-rank="master"] {
+            background-color: var(--color-proficiency-master);
+        }
+
+        &[data-rank="legendary"] {
+            background-color: var(--color-proficiency-legendary);
+            color: #ffffff; // ← change to #1a1a1a if contrast is poor
+        }
+    }
+}

@@ -113,12 +113,17 @@ body,
     --color-rarity-rare: #002664;
     --color-rarity-unique: #54166e;
 
-    /** Proficiency ranks */
+    /* Proficiency ranks */
     --color-proficiency-untrained: #424242;
     --color-proficiency-trained: #171f69;
     --color-proficiency-expert: #3c005e;
     --color-proficiency-master: #664400;
     --color-proficiency-legendary: #{$primary-color};
+
+    /* Inline Link Colors */
+    --color-inline-journal: #5e0000;
+    --color-inline-item: #171f69;
+    --color-inline-actor: #006644;
 
     /* Health Bars */
     --color-pf-health-bg: #5e0000;
@@ -138,6 +143,11 @@ body,
     --color-pf-remaster-secondary: #002a17;
     --color-pf-remaster-tertiary: #4e1b0e;
     --color-pf-remaster-quaternary: #a86753;
+
+    /* Remaster Table Row Colors */
+    --color-pf-remaster-table-header: #002a17;
+    --color-pf-remaster-table-row: #eee3c8;
+    --color-pf-remaster-table-row-alt: #f5efe0;
 
     /* Gatewalkers Heading Colors */
     --gatewalkers-heading-color: #00093b;

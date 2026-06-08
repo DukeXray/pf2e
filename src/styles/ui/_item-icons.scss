@@ -1,0 +1,19 @@
+/* Outlines and shadow for item sheet icon */
+.sheet.pf2e.item:not(.class, .action) .sheet-header img,
+/* Outlines and shadows for item sheet tags */
+.sheet.pf2e.item .sheet-header .tagify__tag {
+    border: 1px solid #d8c384;
+    border-radius: 15%;
+    box-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65),
+        inset 0 0 2px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Adjust the size and padding of item sheet tags */
+.sheet.pf2e.item .sheet-header .tagify__tag {
+    height: 22px;
+    padding-top: 1px;
+}

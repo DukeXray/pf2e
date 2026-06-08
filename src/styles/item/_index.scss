@@ -628,3 +628,9 @@
 }
 
 @import "item-attacher", "persistent-damage-editor";
+
+// Custom item icon styles (border, shadow, object-fit).
+// Lives in src/styles/ui/ rather than here because the same styles
+// must also apply to items posted to the chat sidebar.
+// See src/styles/ui/_item-icons.scss
+@import "../ui/item-icons";

@@ -1,7 +1,7 @@
 // Base journal typography - applies to all non-themed journals
 
 .sheet.journal-sheet:not(.themed) {
-    .journal-page-content {
+    .journal-entry-page {
         font-family: var(--journal-body);
         font-size: var(--font-size-15);
         line-height: 1.6;
@@ -42,6 +42,7 @@
             letter-spacing: 0.01em;
             line-height: 1.1;
             margin-bottom: 0;
+            margin-top: 1em;
         }
 
         h3 {
@@ -81,5 +82,73 @@
         em {
             font-style: italic;
         }
+
+        table {
+            border: none;
+            margin-top: 1rem;
+
+            caption {
+                font-family: "Good OT";
+                font-size: var(--font-size-16);
+                font-stretch: condensed;
+                font-style: normal;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            tfoot {
+                border: none;
+
+                td {
+                    font-family: "Signika", "Palatino Linotype", sans-serif;
+                    font-weight: normal;
+                    font-size: smaller;
+                    line-height: 0.5rem;
+
+                    p {
+                        font-family: inherit;
+                        font-weight: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                    }
+                }
+            }
+
+            th {
+                background-color: var(--color-pf-remaster-table-header);
+                border: none;
+                color: var(--color-light-1);
+                font-family: "Signika", "Palatino Linotype", sans-serif;
+                letter-spacing: 0.02em;
+                padding: 0 0.5em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            tr {
+                background-color: var(--color-pf-remaster-table-row);
+            }
+
+            td {
+                border: none;
+                font-family: var(--sans-serif);
+                font-size: var(--font-size-14);
+                font-weight: 300;
+                vertical-align: text-top;
+                letter-spacing: 0.02em;
+                padding: 0 0.5em;
+
+                p {
+                    line-height: inherit;
+                    margin-bottom: 0;
+                }
+            }
+            tr:nth-child(even) {
+                background-color: var(--color-pf-remaster-table-row-alt);
+            }
+        } // table
     }
 }

@@ -1,0 +1,40 @@
+// src/styles/ui/_content-links.scss
+
+.sheet.journal-sheet:not(.themed),
+.sheet.item {
+    // Base reset applied to all typed links
+    .content-link {
+        &[data-type="JournalEntryPage"],
+        &[data-type="JournalEntry"],
+        &[data-type="Item"],
+        &[data-type="Actor"] {
+            background: none;
+            border: none;
+            font-family: var(--sans-serif-condensed);
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+            padding: 0.1rem 0.4rem;
+            white-space: nowrap;
+            word-break: break-all;
+
+            i {
+                color: inherit;
+            }
+        }
+
+        // Colors per type
+        &[data-type="JournalEntryPage"],
+        &[data-type="JournalEntry"] {
+            color: var(--color-inline-journal);
+        }
+
+        &[data-type="Item"] {
+            color: var(--color-inline-item);
+        }
+
+        &[data-type="Actor"] {
+            color: var(--color-inline-actor);
+        }
+    }
+}

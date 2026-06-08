@@ -1,0 +1,24 @@
+[
+    {
+        "_id": "d18pi37pRaO48c0o",
+        "color": "#002a17",
+        "description": "",
+        "flags": {},
+        "folder": null,
+        "name": "Core Rules",
+        "sort": 0,
+        "sorting": "m",
+        "type": "JournalEntry"
+    },
+    {
+        "_id": "zrFntbHkLc3XKRd2",
+        "color": "#002a17",
+        "description": "",
+        "flags": {},
+        "folder": "d18pi37pRaO48c0o",
+        "name": "Skills",
+        "sort": 0,
+        "sorting": "m",
+        "type": "JournalEntry"
+    }
+]

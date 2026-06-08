@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
 
-            .journal-entry-page {
+            .journal-entry-page:not(.image) {
                 margin: 0;
                 padding: 0 2.5em 0 2.75em;
             }
@@ -25,5 +25,48 @@
     // to visually separate them from top-level page entries
     .sidebar .pages-list .headings {
         margin-left: calc(3 * var(--level-indent));
+    }
+
+    // Target only image-type journal pages, leaving text pages unaffected.
+    // Foundry adds the .image class to article elements when the page type is image.
+    article.journal-entry-page.image {
+        // Remove the default spacing Foundry applies to journal page articles.
+        // Without this the parchment background bleeds in around the image edges.
+        margin: 0;
+        padding: 0;
+
+        // Foundry wraps the figure in a generated div with a long ID-based name.
+        // The direct child selector (>) targets only that immediate wrapper, not
+        // every div nested deeper inside the article. Height must be set here or
+        // the figure inside has nothing to fill against.
+        > div {
+            height: 100%;
+        }
+
+        // The figure is Foundry's journal page content container for image pages.
+        // Strip its default margin and padding so it sits flush against the article.
+        figure.journal-page-content {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            img {
+                // Block removes the small gap browsers add below inline images.
+                // Inline images sit on a text baseline by default, which leaves
+                // a few pixels of dead space underneath — block eliminates that.
+                display: block;
+
+                // Fill the full height of the figure container.
+                height: 100%;
+
+                // Cover fills the container completely without stretching the image.
+                // If the image proportions don't match the container it crops the
+                // edges rather than leaving gaps or distorting the artwork.
+                object-fit: cover;
+
+                // Fill the full width of the journal content area.
+                width: 100%;
+            }
+        }
     }
 }
